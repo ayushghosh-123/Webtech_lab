@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Zoom In Zoom out</title>
+        <style>
+            .zoom-box{
+                width: 100%;
+                height: 100%;
+                margin:  auto;
+                overflow: hidden;
+            }
+
+            .zoom-box img{
+                width: 100%;
+                height: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .zoom-box:hover img{
+                transform: scale(2.1);
+            }
+
+            .zoom-out{
+                animation: zoomout 1s infinite alternate;
+            }
+
+            @keyframes zoomout{
+                0%{
+                    transform: scale(1);
+                }
+                100%{
+                    transform: scale(0.9);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="zoom-box">
+            <img src="image3.jpg" alt="zoom-out">
+        </div>
+    </body>
+</html>
