@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Friend File Form</title>
+        <style>
+            .box{
+                border: 2px solid black;
+                padding: 20px;
+                width: 600px;
+            }
+            .form-section{
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <form >
+                <div class="from-section">
+                    <label >Enter your name</label>
+                    <input type="text" name="friend_name" style="float:right; width:250px">
+                </div>
+                <br>
+                <div class="from-section" style="clear: both">
+                    <label > Choose the file you want to post to your Friend</label>
+                    <br>
+                    <input type="file" name="file_upload">
+                </div>
+                <br>
+                <div class="from-section">
+                    <label >What does the file contain</label>
+                    <br>
+                    <input type="checkbox" name="content" value="image">Image
+                    <input type="checkbox" name="content" value="source">Source
+                    <input type="checkbox" name="content" value="binary">Binary
+                </div>
+                <br>
+                <div class="from-section">
+                    You have complete the Form.
+                    <input type="submit" value="Submit Query" style="font-weight: bold; padding:  5px 15px;">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
