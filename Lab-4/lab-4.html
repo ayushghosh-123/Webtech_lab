@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Frame Layout</title>
+        <style>
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            td{
+                border: 1px solid lightgray;
+                padding: 15px;
+            }
+
+            .header{
+                background-color: orange;
+                font-weight: bold ;
+            }
+
+            .pink{
+                background-color: rgb(255, 177, 177);
+            }
+            .pink p{
+                background-color: white;
+                text-align: left;
+            }
+            .pink marquee{
+                background-color: white;
+                text-align: left;
+            }
+
+            .blink{
+                animation: blink 1s step-start 0s infinite;
+            }
+            @keyframes blink {
+                50%{
+                    opacity: 0;
+                }
+            }
+            .pink img{
+                width: 180px;
+                height: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 style="text-align: center;"> HTML Frame Output</h3>
+        <table>
+            <tr>
+                <td colspan="3" class="header">First Frame : Name and address</td>
+            </tr>
+
+            <tr class="pink">
+            <td>
+                Second frame
+                <br>
+                <br>
+                <p>Bullet list of qualification</p>
+            </td>
+            <td>
+                Third frame 
+                <br>
+                <br>
+                <p>Links to favourite sites</p>
+            </td>
+            <td>
+
+            </td>
+            </tr>
+
+            <tr class="pink">
+                <td>
+                    Fourth Frame
+                    <br>
+                    <marquee>scrolling message</marquee>
+                </td>
+                <td>
+                    Fifth Frame
+                    <br>
+                    <span class="blink">Blinking reminder</span>
+                </td>
+                <td>
+                    sixth frame <br>
+                    <img  src="image4.jpg" alt="sample Image">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
