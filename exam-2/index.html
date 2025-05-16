@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mixed Middle Frames (Single HTML - Not Recommended)</title>
+<style>
+  body { margin: 0; }
+  .frameset-container {
+    display: flex;
+    height: 100vh; /* Make it take the full viewport height */
+  }
+  .left-frame {
+    width: 25%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .middle-right-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Adjust as needed */
+  }
+  .middle-top-frame {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50%;
+  }
+  .middle-bottom-frame {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50%;
+  }
+  .right-frame {
+    width: 25%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+  <div class="frameset-container">
+    <div class="left-frame">
+      Frame 1
+      <div>Contents of Frame 1</div>
+    </div>
+    <div class="middle-right-container">
+      <div class="middle-top-frame">
+        Frame 2
+        <div>Contents of Frame 2</div>
+      </div>
+      <div class="middle-bottom-frame">
+        Frame 3
+        <div>Contents of Frame 3</div>
+      </div>
+    </div>
+    <div class="right-frame">
+      Frame 4
+      <div>Contents of Frame 4</div>
+    </div>
+  </div>
+
+</body>
+</html>

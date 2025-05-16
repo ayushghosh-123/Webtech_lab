@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Winter Schedule</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .timetable {
+        border: 2px solid black;
+        margin: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f0f0f0;
+      }
+      .lunch {
+        background-color: #e0ffe0; /* Light green for lunch */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="timetable">
+      <h2 style="text-align: center">Winter Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Mon</th>
+            <th>Tues</th>
+            <th>Wed</th>
+            <th>Thurs</th>
+            <th>Fri</th>
+            <th rowspan="6">Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Arts</td>
+          </tr>
+          <tr>
+            <td>science</td>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Arts</td>
+          </tr>
+          <tr class="lunch">
+            <th colspan="5">Lunch</th>
+          </tr>
+          <tr>
+            <td rowspan="2">Project</td>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Arts</td>
+          </tr>
+          <tr>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Arts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
