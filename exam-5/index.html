@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 80%;
+            max-width: 700px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .general-info {
+            margin-bottom: 15px;
+        }
+        .general-info p {
+            margin-bottom: 8px;
+        }
+        .general-info label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+        }
+        .general-info input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: calc(100% - 130px);
+            box-sizing: border-box;
+        }
+        .instructions {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .section h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #555;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .question {
+            margin-bottom: 12px;
+        }
+        .question label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .options {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .rating-options label {
+            margin-right: 10px;
+        }
+        .overall-options label {
+            margin-right: 20px;
+        }
+        textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 1em;
+        }
+        .thank-you {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        .radio-group label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Feed Back form</h2>
+        <div class="general-info">
+            <p><label for="grade">Grade:</label> <input type="text" id="grade" size="20"></p>
+            <p><label for="date">Date of Visit:</label> <input type="text" id="date" size="20"></p>
+            <p><label for="subject">Subject Name:</label> <input type="text" id="subject" size="30"></p>
+            <p><label for="topic">Topic Name:</label> <input type="text" id="topic" size="30"></p>
+        </div>
+
+        <div class="instructions">
+            (Instructions: Just mark by circle where ever you find appropriate)
+        </div>
+
+        <div class="section">
+            <h3>CONTENT</h3>
+            <div class="question">
+                <label>Was the content interesting?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="interesting" value="yes"> Yes</label>
+                    <label><input type="radio" name="interesting" value="no"> No</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>Was the content understandable?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="understandable" value="yes"> Yes</label>
+                    <label><input type="radio" name="understandable" value="no"> No</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>Was there clarity in the content?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="clarity" value="yes"> Yes</label>
+                    <label><input type="radio" name="clarity" value="no"> No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>STRUCTURE (Rate from 1-5 where 1 being the least)</h3>
+            <div class="question">
+                <label>How was the focus of the talk good?</label>
+                <div class="rating-options">
+                    <label><input type="radio" name="focus" value="1"> 1</label>
+                    <label><input type="radio" name="focus" value="2"> 2</label>
+                    <label><input type="radio" name="focus" value="3"> 3</label>
+                    <label><input type="radio" name="focus" value="4"> 4</label>
+                    <label><input type="radio" name="focus" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>How far did you find the lecturer useful?</label>
+                <div class="rating-options">
+                    <label><input type="radio" name="useful" value="1"> 1</label>
+                    <label><input type="radio" name="useful" value="2"> 2</label>
+                    <label><input type="radio" name="useful" value="3"> 3</label>
+                    <label><input type="radio" name="useful" value="4"> 4</label>
+                    <label><input type="radio" name="useful" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>How far did the lecturer meet your expectations?</label>
+                <div class="rating-options">
+                    <label><input type="radio" name="expectations" value="1"> 1</label>
+                    <label><input type="radio" name="expectations" value="2"> 2</label>
+                    <label><input type="radio" name="expectations" value="3"> 3</label>
+                    <label><input type="radio" name="expectations" value="4"> 4</label>
+                    <label><input type="radio" name="expectations" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>What struck you about this topic?</label>
+                <textarea name="struck_topic" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>PRESENTATION (Rate from 1-5 where 1 being the least)</h3>
+            <div class="question">
+                <label>How far the lecturer managed to capture your attention?</label>
+                <div class="rating-options">
+                    <label><input type="radio" name="attention" value="1"> 1</label>
+                    <label><input type="radio" name="attention" value="2"> 2</label>
+                    <label><input type="radio" name="attention" value="3"> 3</label>
+                    <label><input type="radio" name="attention" value="4"> 4</label>
+                    <label><input type="radio" name="attention" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>How did you find the lecturer vocabulary?</label>
+                <div class="rating-options">
+                    <label><input type="radio" name="vocabulary" value="1"> 1</label>
+                    <label><input type="radio" name="vocabulary" value="2"> 2</label>
+                    <label><input type="radio" name="vocabulary" value="3"> 3</label>
+                    <label><input type="radio" name="vocabulary" value="4"> 4</label>
+                    <label><input type="radio" name="vocabulary" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>How far audience participation & interaction encouraged?</label>
+                <div class="rating-options">
+                    <label><input type="radio" name="participation" value="1"> 1</label>
+                    <label><input type="radio" name="participation" value="2"> 2</label>
+                    <label><input type="radio" name="participation" value="3"> 3</label>
+                    <label><input type="radio" name="participation" value="4"> 4</label>
+                    <label><input type="radio" name="participation" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>How far the lecturer appeared enthusiastic about the subject?</label>
+                <div class="rating-options">
+                    <label><input type="radio" name="enthusiastic" value="1"> 1</label>
+                    <label><input type="radio" name="enthusiastic" value="2"> 2</label>
+                    <label><input type="radio" name="enthusiastic" value="3"> 3</label>
+                    <label><input type="radio" name="enthusiastic" value="4"> 4</label>
+                    <label><input type="radio" name="enthusiastic" value="5"> 5</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>OVERALL</h3>
+            <div class="question">
+                <label>Where you satisfied with the lecture?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="satisfied" value="yes"> Yes</label>
+                    <label><input type="radio" name="satisfied" value="no"> No</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>Was the lecturer able to answer your questions?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="answered" value="yes"> Yes</label>
+                    <label><input type="radio" name="answered" value="no"> No</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>What is your overall impression about the lecture?</label>
+                <div class="overall-options">
+                    <label><input type="radio" name="impression" value="good"> Good</label>
+                    <label><input type="radio" name="impression" value="average"> Average</label>
+                    <label><input type="radio" name="impression" value="ok"> Ok</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>What suggestions do you have to improve the lecturers approach?</label>
+                <textarea name="suggestions" rows="4"></textarea>
+            </div>
+        </div>
+
+        <p class="thank-you">Thank you for your Participation!</p>
+    </div>
+</body>
+</html>
